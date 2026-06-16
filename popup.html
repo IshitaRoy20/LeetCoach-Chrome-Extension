@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LeetCoach AI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="logo">⚡</span>
+      <h1>LeetCoach <span class="accent">AI</span></h1>
+    </header>
+
+    <div id="api-section">
+      <label for="apiKey">Gemini API Key</label>
+      <div class="input-row">
+        <input type="password" id="apiKey" placeholder="Paste your API key" />
+        <button id="saveKey">Save</button>
+      </div>
+      <p class="hint">Key is stored locally. Never sent anywhere except Google.</p>
+    </div>
+
+    <div id="status-bar" class="hidden"></div>
+
+    <button id="generateBtn" class="primary-btn" disabled>
+      Generate Follow-up Questions
+    </button>
+
+    <div id="output" class="hidden">
+      <div class="output-header">
+        <span id="problem-title"></span>
+      </div>
+      <ol id="questions-list"></ol>
+    </div>
+
+    <div id="loading" class="hidden">
+      <div class="spinner"></div>
+      <p>Thinking like a FAANG interviewer...</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
